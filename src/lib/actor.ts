@@ -23,7 +23,7 @@ export const APIFY_STORAGE_TYPES = {
  */
 export const getApifyStorageClient = async (
     options: MemoryStorageOptions | ApifyClientOptions = {},
-    forceCloud = false,
+    forceCloud = Boolean(Number(process.env.APIFY_IS_AT_HOME)),
 ): Promise<StorageClient> => {
     const storageDir = getLocalStorageDir();
 
