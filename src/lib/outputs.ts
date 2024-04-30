@@ -1,11 +1,11 @@
 import chalk from 'chalk';
 
 export const error = (message: string) => {
-    console.log(`${chalk.red('Error:')} ${message}`);
+    console.error(`${chalk.red('Error:')} ${message}`);
 };
 
 export const warning = (message: string) => {
-    console.log(`${chalk.rgb(254, 90, 29).bold('Warning:')} ${message}`);
+    console.warn(`${chalk.rgb(254, 90, 29).bold('Warning:')} ${message}`);
 };
 
 export const success = (message: string) => {
